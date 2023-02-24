@@ -1,8 +1,6 @@
 .form-container {
-  display: flex;
   border-radius: calc(0.1 * 100px);
   box-shadow: 0 4px 14px 0 rgba(70, 70, 70, 0.38);
-  justify-content: space-around;
   background: #fff;
   font-size: 1rem;
 }
@@ -13,6 +11,7 @@
   padding-left: 10px;
   border-radius: calc(0.5 * 100px);
   font-size: 1rem;
+  border: 2px solid black;
 }
 
 .input-text::placeholder {
