@@ -1,14 +1,16 @@
+import AddForm from 'components/AddForm';
 import Navbar from '../components/Navbar';
 import BookList from '../components/BookList';
 
-const Home = () => {
-    return (
-      <>
-        <Navbar />
-        <div className="wrapper">
-         <BookList /> 
-        </div>
-      </>
-    );
-  };
-  export default Home;
+function Home() {
+  return (
+    <>
+      <Navbar />
+      <div className="wrapper">
+        <BookList />
+        <AddForm />
+      </div>
+    </>
+  );
+}
+export default Home;
