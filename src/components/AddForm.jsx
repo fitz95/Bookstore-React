@@ -6,7 +6,7 @@ import { addBook } from 'redux/books/bookSlice';
 import './AddForm.css';
 
 function AddForm() {
-  const [user, setUser] = useState({
+  const [book, setBook] = useState({
     author: null,
     title: null,
     item_id: uuidv4(),
@@ -15,14 +15,14 @@ function AddForm() {
   const handleChange = (e) => {
     e.preventDefault();
     const { name, value } = e.target;
-    setUser({ ...user, [name]: value });
+    setBook({ ...book, [name]: value });
   };
   const handleSubmit = (e) => {
     e.preventDefault();
-    setUser({
-      ...user, item_id: uuidv4(),
+    setBook({
+      ...book, item_id: uuidv4(),
     });
-    dispatch(addBook(user));
+    dispatch(addBook(book));
     e.target.reset();
   };
   return (

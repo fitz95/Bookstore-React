@@ -2,14 +2,15 @@ import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
   categoryLists: [],
-  status: 'Under Construction',
+  status: '',
 };
 
 const categoriesSlice = createSlice({
   name: 'bookcategories',
   initialState,
   reducers: {
-    checkBookStatus: (state) => state.status,
+    // eslint-disable-next-line prefer-object-spread
+    checkBookStatus: (state) => ({ ...state, status: 'Under Construction' }),
   },
 });
 
