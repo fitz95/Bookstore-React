@@ -1,5 +1,10 @@
+import React from 'react';
+import { useDispatch } from 'react-redux';
+import { remove } from 'redux/books/bookSlice';
 // eslint-disable-next-line react/prop-types
-function BookUi({ title, author }) {
+function BookUi({ bookId, title, author }) {
+  const dispatch = useDispatch();
+
   return (
     <li>
       <span>
@@ -12,7 +17,15 @@ function BookUi({ title, author }) {
         Author:
         {author}
       </span>
-      <button type="button">Remove</button>
+      <button
+        type="button"
+        className="btn"
+        onClick={() => {
+          dispatch(remove(bookId));
+        }}
+      >
+        Remove
+      </button>
     </li>
   );
 }

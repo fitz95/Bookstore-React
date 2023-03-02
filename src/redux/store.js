@@ -9,4 +9,7 @@ const store = configureStore({
   },
 });
 
+// eslint-disable-next-line no-undef
+// store.dispatch(bookstore.actions.remove('item1'));
+
 export default store;
