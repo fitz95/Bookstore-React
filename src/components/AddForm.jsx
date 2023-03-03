@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
 import { FcPlus } from 'react-icons/fc';
-import { addBook } from 'redux/books/bookSlice';
+import { addBook, addBooks, fetchBooks } from 'redux/books/bookSlice';
 import './AddForm.css';
 
 function AddForm() {
@@ -10,6 +10,7 @@ function AddForm() {
     author: null,
     title: null,
     item_id: uuidv4(),
+    category: '',
   });
   const dispatch = useDispatch();
   const handleChange = (e) => {
@@ -23,6 +24,11 @@ function AddForm() {
       ...book, item_id: uuidv4(),
     });
     dispatch(addBook(book));
+
+    dispatch((addBooks(book)));
+    setTimeout(() => {
+      dispatch(fetchBooks);
+    }, 500);
     e.target.reset();
   };
   return (
