@@ -7,27 +7,15 @@
 }
 
 .form {
-  /* margin: 2.313rem 6.25rem 0; */
   width: 90rem;
   margin: 2.313rem 4.25rem 0;
 }
 
-.input-author {
+.input-form {
   width: 38.5rem;
   height: 2.813rem;
   margin: 1.188rem 2.125rem 0 0;
   padding: 0.813rem 30.688rem 0.813rem 1.063rem;
-  border-radius: 4px;
-  border: solid 1px var(--white);
-  background-color: var(--white-two);
-  font-size: 1rem;
-}
-
-.input-title {
-  width: 30.5rem;
-  height: 2.813rem;
-  margin: 1.188rem 2.125rem 0 0;
-  padding: 0.813rem 20.688rem 0.813rem 1.063rem;
   border-radius: 4px;
   border: solid 1px var(--white);
   background-color: var(--white-two);

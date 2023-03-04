@@ -40,7 +40,7 @@ function AddForm() {
         <input
           type="text"
           placeholder="Add Author"
-          className="input-author"
+          className="input-form"
           name="author"
           required
           onChange={handleChange}
@@ -49,7 +49,7 @@ function AddForm() {
         {/* <input
           type="text"
           placeholder="Title"
-          className="input-title"
+          className="input-form"
           name="title"
           required
           onChange={handleChange}
