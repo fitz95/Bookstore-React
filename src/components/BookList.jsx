@@ -19,7 +19,7 @@ function BookList() {
   }, [dispatch]);
   const bookStore = useSelector((store) => store.bookstore.books);
   return (
-    <ul>
+    <div>
       {bookStore.map((book) => (
         <BookUi
           key={book.id}
@@ -29,7 +29,7 @@ function BookList() {
           title={book.title}
         />
       ))}
-    </ul>
+    </div>
   );
 }
 export default BookList;

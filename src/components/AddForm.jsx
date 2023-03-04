@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
-import { FcPlus } from 'react-icons/fc';
+import { AiFillCaretDown } from 'react-icons/ai';
 import { addBook, addBooks, fetchBooks } from 'redux/books/bookSlice';
-import './AddForm.css';
+import '../css/AddForm.css';
 
 function AddForm() {
   const [book, setBook] = useState({
@@ -21,47 +21,49 @@ function AddForm() {
   const handleSubmit = (e) => {
     e.preventDefault();
     setBook({
-      ...book, item_id: uuidv4(),
+      ...book,
+      item_id: uuidv4(),
     });
     dispatch(addBook(book));
 
-    dispatch((addBooks(book)));
+    dispatch(addBooks(book));
     setTimeout(() => {
       dispatch(fetchBooks);
     }, 500);
     e.target.reset();
   };
   return (
-    <>
+    <div className="form">
+      <hr className="form-line" />
+      <h2 className="form-title">ADD NEW BOOK</h2>
       <form className="form-container" onSubmit={handleSubmit}>
         <input
           type="text"
           placeholder="Add Author"
-          className="input-text"
+          className="input-author"
           name="author"
           required
           onChange={handleChange}
         />
         <br />
-        <input
+        {/* <input
           type="text"
-          placeholder="Add Title"
-          className="input-text"
+          placeholder="Title"
+          className="input-title"
           name="title"
           required
           onChange={handleChange}
-        />
+        /> */}
+        <div className="inputcat">
+          <span className="input-span">Category</span>
+          <AiFillCaretDown className="downicon" />
+        </div>
         <br />
-        <button className="input-submit" type="submit">
-          <FcPlus
-            style={{
-              fontSize: '20px',
-              marginTop: '2px',
-            }}
-          />
-        </button>
+        <div className="input-submit" type="submit">
+          <span className="addformspan">ADD BOOK</span>
+        </div>
       </form>
-    </>
+    </div>
   );
 }
 export default AddForm;

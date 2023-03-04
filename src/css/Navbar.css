@@ -1,0 +1,96 @@
+:root {
+  --bubble-gum-pink: #ff5ab7;
+  --black: #1e1e1e;
+  --pinkish-grey: #c7c7c7;
+  --very-light-pink: #c4c4c4;
+  --pale-grey: #f5f6fa;
+  --black-5: rgba(0, 0, 0, 0.05);
+  --z: #fafafa;
+  --black-two: #121212;
+  --white: #e8e8e8;
+  --medium-blue: #307bbe;
+  --cool-blue: #4386bf;
+  --azure: #0290ff;
+  --white-two: #fff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto Slab', serif;
+}
+
+nav {
+  height: 58px;
+}
+
+nav > ul {
+  display: flex;
+  list-style: none;
+  height: 58px;
+  color: #212529;
+}
+
+.navbar {
+  height: 5.938rem;
+  margin: 0 0 2.375rem;
+  padding: 1.438rem 6.188rem 1.688rem 6.25rem;
+  background-color: var(--white-two);
+  display: flex;
+  justify-content: flex-start;
+  align-items: baseline;
+}
+
+.icon-style {
+  font-size: 50px;
+  position: absolute;
+  right: 5%;
+  color: #0290ff;
+}
+
+.title {
+  height: 2.313rem;
+  margin: 0.375rem 2.938rem 0.125rem 0;
+  font-family: 'Roboto Slab', serif;
+  font-size: 1.875rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 2px;
+  color: var(--azure);
+}
+
+li {
+  position: relative;
+  font-size: 14px;
+  padding: 0.7rem 1rem;
+  cursor: pointer;
+}
+
+.menuitems {
+  width: 3.688rem;
+  height: 1rem;
+  text-decoration: none;
+  margin: 1.125rem 2.563rem 0.688rem 0;
+  font-family: 'Roboto Slab', serif;
+  font-size: 15px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1.9px;
+  color: black;
+}
+
+li button {
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  font-size: inherit;
+  background-color: transparent;
+}

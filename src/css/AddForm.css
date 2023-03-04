@@ -1,0 +1,98 @@
+.form-container {
+  border-radius: calc(0.1 * 100px);
+  font-size: 1rem;
+  display: flex;
+  justify-content: space-between;
+  width: 90rem;
+}
+
+.form {
+  /* margin: 2.313rem 6.25rem 0; */
+  width: 90rem;
+  margin: 2.313rem 4.25rem 0;
+}
+
+.input-author {
+  width: 38.5rem;
+  height: 2.813rem;
+  margin: 1.188rem 2.125rem 0 0;
+  padding: 0.813rem 30.688rem 0.813rem 1.063rem;
+  border-radius: 4px;
+  border: solid 1px var(--white);
+  background-color: var(--white-two);
+  font-size: 1rem;
+}
+
+.input-title {
+  width: 30.5rem;
+  height: 2.813rem;
+  margin: 1.188rem 2.125rem 0 0;
+  padding: 0.813rem 20.688rem 0.813rem 1.063rem;
+  border-radius: 4px;
+  border: solid 1px var(--white);
+  background-color: var(--white-two);
+  font-size: 1rem;
+}
+
+.input-submit {
+  height: 2.813rem;
+  width: 11.5rem;
+  margin: 1.188rem 0 0 2.125rem;
+  padding: 0.801rem 1.188rem 0.886rem 1.375rem;
+  border-radius: 3px;
+  background-color: var(--azure);
+  text-align: center;
+}
+
+.form-line {
+  width: 90rem;
+  height: 0.125rem;
+  margin-top: 45px;
+  margin-bottom: 45px;
+  border: solid 1px var(--white);
+}
+
+.form-title {
+  width: 10.875rem;
+  height: 1.5rem;
+  margin: 1.813rem 32.75rem 1.188rem 0;
+  font-family: 'Roboto Slab', serif;
+  font-size: 1.25rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.18px;
+  color: #888;
+}
+
+.addformspan {
+  width: 8.938rem;
+  height: 1.125rem;
+  font-family: 'Roboto Slab', serif;
+  font-size: 0.813rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.5px;
+  text-align: center;
+  color: var(--white-two);
+}
+
+.downicon {
+  opacity: 0.6;
+}
+
+.inputcat {
+  width: 30.5rem;
+  height: 2.813rem;
+  margin: 1.188rem 2.125rem 0 0;
+  padding: 0.813rem 1.688rem 0.813rem 1.063rem;
+  border-radius: 4px;
+  border: solid 1px var(--white);
+  background-color: var(--white-two);
+  font-size: 1rem;
+  display: flex;
+  justify-content: space-between;
+}

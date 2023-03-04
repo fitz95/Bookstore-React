@@ -1,0 +1,199 @@
+:root {
+  --bubble-gum-pink: #ff5ab7;
+  --black: #1e1e1e;
+  --pinkish-grey: #c7c7c7;
+  --very-light-pink: #c4c4c4;
+  --pale-grey: #f5f6fa;
+  --black-5: rgba(0, 0, 0, 0.05);
+  --z: #fafafa;
+  --black-two: #121212;
+  --white: #e8e8e8;
+  --medium-blue: #307bbe;
+  --cool-blue: #4386bf;
+  --azure: #0290ff;
+  --white-two: #fff;
+}
+
+.book-card {
+  width: 90rem;
+  height: 10.625rem;
+  margin: 2.313rem 4.25rem 0;
+  padding: 2rem 9.188rem 1.625rem 1.688rem;
+  border-radius: 4px;
+  border: solid 1px var(--white);
+  background-color: var(--white-two);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.category {
+  width: 3.063rem;
+  height: 1.125rem;
+  margin: 0 2.438rem 0 0;
+  opacity: 0.5;
+  font-family: 'Roboto Slab', serif;
+  font-size: 15px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--black-two);
+}
+
+.book-title {
+  width: 12.313rem;
+  height: 1.813rem;
+  margin: 0.188rem 20.188rem 0 0;
+  font-family: 'Roboto Slab', serif;
+  font-size: 1.375rem;
+  font-weight: 900;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.2px;
+  color: var(--black-two);
+}
+
+.book-author {
+  width: 6.688rem;
+  height: 1.188rem;
+  margin: 0.25rem 0 0;
+  font-family: 'Roboto Slab', serif;
+  font-size: 0.875rem;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1px;
+  letter-spacing: normal;
+  color: var(--cool-blue);
+  opacity: 0.6;
+}
+
+.options {
+  width: 4.563rem;
+  height: 1.188rem;
+  margin: 12px 0.938rem 0.125rem 0;
+  font-family: 'Roboto Slab', serif;
+  font-size: 0.875rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #4386bf;
+  display: flex;
+  column-gap: 20px;
+  align-items: baseline;
+  text-shadow: 0 0 0.5px rgba(197, 170, 170, 0.9);
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+.vertical {
+  width: 1px;
+  height: 25px;
+  align-self: flex-start;
+  opacity: 0.5;
+}
+
+.completed {
+  width: 5rem;
+  height: 1.125rem;
+  margin: 0.438rem 4.938rem 0.75rem 0.75rem;
+  opacity: 0.5;
+  font-family: 'Roboto Slab', serif;
+  font-size: 0.875rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: transparent;
+  text-shadow: 0 0 0.5px rgba(0, 0, 0, 0.9);
+}
+
+.Percent-Complete {
+  width: 4.25rem;
+  height: 2.438rem;
+  margin: 0.063rem 5.75rem 0 0.688rem;
+  font-family: 'Roboto Slab', serif;
+  font-size: 2rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--black-two);
+}
+
+.Current-Chapter {
+  width: 7.875rem;
+  height: 1.125rem;
+  margin: 0.063rem 3.625rem 0 3.688rem;
+  opacity: 0.6;
+  font-family: 'Roboto Slab', serif;
+  font-size: 0.813rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--black-two);
+}
+
+.Current-Lesson {
+  width: 4.688rem;
+  height: 1.313rem;
+  margin: 0.438rem 6.813rem 0.25rem 3.688rem;
+  font-family: 'Roboto Slab', serif;
+  font-size: 1rem;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.4px;
+  color: var(--black-two);
+  display: block;
+}
+
+.btn-div {
+  width: 11.5rem;
+  height: 2.363rem;
+  margin: 0.75rem 0 0.563rem 3.688rem;
+  padding: 0.638rem 1.188rem 0.5rem 1.375rem;
+  border-radius: 3px;
+  background-color: var(--azure);
+}
+
+.Update-progress {
+  width: 8.938rem;
+  height: 1.125rem;
+  font-family: 'Roboto Slab', serif;
+  font-size: 0.813rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.5px;
+  text-align: center;
+  color: var(--white-two);
+  opacity: 0.6;
+}
+
+.book-vertical {
+  width: 1px;
+  height: 50px;
+  opacity: 0.6;
+}
+
+.percentage-flex {
+  display: flex;
+  align-items: center;
+}
+
+.circular-Progressbar {
+  height: 40px;
+  font-size: 12px;
+}
