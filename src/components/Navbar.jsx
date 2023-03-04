@@ -1,18 +1,21 @@
 import { Link } from 'react-router-dom';
-import './Navbar.css';
+import { FaRegUserCircle } from 'react-icons/fa';
+import '../css/Navbar.css';
 
-const Navbar = () => {
+function Navbar() {
   return (
-    <nav>
+    <nav className="navbar">
+      <h2 className="title">BOOKSTORE CMS</h2>
       <ul>
-        <li>
-          <Link to="/">BOOK</Link>
+        <li className="menuitems">
+          <Link to="/" style={{ textDecoration: 'none' }}>BOOKS</Link>
         </li>
-        <li>
-          <Link to="/Categories">Categories</Link>
+        <li className="menuitems">
+          <Link to="/Categories" style={{ textDecoration: 'none' }}>CATEGORIES</Link>
         </li>
       </ul>
+      <FaRegUserCircle className="icon-style" />
     </nav>
   );
-};
+}
 export default Navbar;

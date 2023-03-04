@@ -1,31 +1,69 @@
-import { FcPlus } from 'react-icons/fc';
-import './AddForm.css'
+import { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { v4 as uuidv4 } from 'uuid';
+import { AiFillCaretDown } from 'react-icons/ai';
+import { addBook, addBooks, fetchBooks } from 'redux/books/bookSlice';
+import '../css/AddForm.css';
 
-const InputBook = () => {
-
-    return (
-      <>
-        <form className="form-container">
-          <input
-            type="text"
-            placeholder="Add Author"
-            className="input-text"
-          />
-           <input
-            type="text"
-            placeholder="Add Title"
-            className="input-text"
-          />
-          <button className="input-submit" type="button">
-            <FcPlus
-              style={{
-                fontSize: '20px',
-                marginTop: '2px',
-              }}
-            />
-          </button>
-        </form>
-      </>
-    );
+function AddForm() {
+  const [book, setBook] = useState({
+    author: null,
+    title: null,
+    item_id: uuidv4(),
+    category: '',
+  });
+  const dispatch = useDispatch();
+  const handleChange = (e) => {
+    e.preventDefault();
+    const { name, value } = e.target;
+    setBook({ ...book, [name]: value });
   };
-  export default InputBook;
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setBook({
+      ...book,
+      item_id: uuidv4(),
+    });
+    dispatch(addBook(book));
+
+    dispatch(addBooks(book));
+    setTimeout(() => {
+      dispatch(fetchBooks);
+    }, 500);
+    e.target.reset();
+  };
+  return (
+    <div className="form">
+      <hr className="form-line" />
+      <h2 className="form-title">ADD NEW BOOK</h2>
+      <form className="form-container" onSubmit={handleSubmit}>
+        <input
+          type="text"
+          placeholder="Add Author"
+          className="input-form"
+          name="author"
+          required
+          onChange={handleChange}
+        />
+        <br />
+        {/* <input
+          type="text"
+          placeholder="Title"
+          className="input-form"
+          name="title"
+          required
+          onChange={handleChange}
+        /> */}
+        <div className="inputcat">
+          <span className="input-span">Category</span>
+          <AiFillCaretDown className="downicon" />
+        </div>
+        <br />
+        <div className="input-submit" type="submit">
+          <span className="addformspan">ADD BOOK</span>
+        </div>
+      </form>
+    </div>
+  );
+}
+export default AddForm;

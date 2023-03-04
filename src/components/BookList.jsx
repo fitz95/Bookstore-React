@@ -1,14 +1,35 @@
+import { useSelector, useDispatch } from 'react-redux';
+import { useEffect } from 'react';
+import { fetchBooks } from 'redux/books/bookSlice';
 import BookUi from './BookUi';
-import { v4 as uuidv4 } from 'uuid';
+
 /* eslint-disable react/prop-types */
 function BookList() {
-  const bookArray = [{ title: 'GooseBumps', author: 'Theodore King' }];
+  const dispatch = useDispatch();
+  useEffect(() => {
+    let active = true;
+    (async () => {
+      if (active) {
+        dispatch(fetchBooks());
+      }
+    })();
+    return () => {
+      active = false;
+    };
+  }, [dispatch]);
+  const bookStore = useSelector((store) => store.bookstore.books);
   return (
-    <ul>
-      {bookArray.map((book) => (
-        <BookUi title={book.title} author={book.author} key={uuidv4()} />
+    <div>
+      {bookStore.map((book) => (
+        <BookUi
+          key={book.id}
+          id={book.id}
+          bookId={book.id}
+          author={book.author}
+          title={book.title}
+        />
       ))}
-    </ul>
+    </div>
   );
 }
 export default BookList;
